@@ -60,6 +60,7 @@ WIN_COMBINATIONS = [
     else
       turn
     end
+    puts "Please enter 1-9:"
   end
 
   def won?
