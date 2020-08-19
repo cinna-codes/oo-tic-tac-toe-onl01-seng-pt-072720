@@ -1,6 +1,5 @@
 class TicTacToe
 attr_accessor :board
-
 WIN_COMBINATIONS = [
   [0,1,2], #Top row
   [3,4,5], #Middle row
@@ -61,6 +60,7 @@ WIN_COMBINATIONS = [
     else
       turn
     end
+    puts "Please enter 1-9:"
   end
 
   def won?
@@ -80,7 +80,7 @@ WIN_COMBINATIONS = [
     end
 
   def full?
-	   turn_count == 9
+       turn_count == 9
   end
 
   def draw?
@@ -104,6 +104,18 @@ WIN_COMBINATIONS = [
   def winner
     if won?
       turn_count % 2 == 0 ? "O" : "X"
+    end
+  end
+
+
+  def play
+    until over?
+      turn
+    end
+    if won?
+      puts "Congratulations " + winner + "!"
+    else
+      puts "Cat's Game!"
     end
   end
 
