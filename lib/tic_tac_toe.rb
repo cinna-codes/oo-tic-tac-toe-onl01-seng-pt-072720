@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+require 'pry'
+>>>>>>> 3aa1b0a46df6b052724d5245191a7f5cb35d5399
 class TicTacToe
 attr_accessor :board
 
@@ -70,6 +74,7 @@ WIN_COMBINATIONS = [
         position_3 = board[combo[2]]
         if position_1 == "X" && position_2 == "X" && position_3 == "X"
           true
+<<<<<<< HEAD
           return combo
         elsif position_1 == "O" && position_2 == "O" && position_3 == "O"
           true
@@ -79,10 +84,26 @@ WIN_COMBINATIONS = [
       false
     end
 
+=======
+          #puts "#{WIN_COMBINATIONS[combo]}"
+          return combo
+        elsif position_1 == "O" && position_2 == "O" && position_3 == "O"
+          true
+          #puts "#{WIN_COMBINATIONS[combo]}"
+          return combo
+        else
+          return false
+        end
+      end
+    end
+
+
+>>>>>>> 3aa1b0a46df6b052724d5245191a7f5cb35d5399
   def full?
 	   turn_count == 9
   end
 
+<<<<<<< HEAD
   def draw?
     if full? && !won?
       return true
@@ -107,4 +128,6 @@ WIN_COMBINATIONS = [
     end
   end
 
+=======
+>>>>>>> 3aa1b0a46df6b052724d5245191a7f5cb35d5399
 end
