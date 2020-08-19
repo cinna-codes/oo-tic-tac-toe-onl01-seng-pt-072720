@@ -107,6 +107,14 @@ WIN_COMBINATIONS = [
   end
 
 
+def play
+  until over?
+    turn
+  end
+end
+
+
+
   # until the game is over
   #   take turns
   # end
