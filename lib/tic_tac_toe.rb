@@ -107,28 +107,15 @@ WIN_COMBINATIONS = [
   end
 
 
-def play
-  until over?
-    turn
+  def play
+    until over?
+      turn
+    end
+    if won?
+      puts "Congratulations " + winner + "!"
+    else
+      puts "Cat's Game!"
+    end
   end
-  if won?
-    puts "Congratulations " + winner + "!"
-  else
-    puts "Cat's Game!"
-  end
-end
-
-
-
-  # until the game is over
-  #   take turns
-  # end
-  #
-  # if the game was won
-  #   congratulate the winner
-  # else if the game was a draw
-  #   tell the players it ended in a draw
-  # end
-
 
 end
