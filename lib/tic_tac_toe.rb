@@ -112,7 +112,7 @@ def play
     turn
   end
   if won?
-    puts "Congratulations #{winner}!"
+    puts "Congratulations " + winner "!"
   end
 end
 
